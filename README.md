@@ -48,34 +48,34 @@ GitHub-профіль: [Sasha7543](https://github.com/Sasha7543)
 ### Встановлення залежностей
 
 ```powershell
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-pip install -r requirements.txt
+py -3.11 -m pip install -r requirements.txt
 ```
+
+На цьому комп'ютері команда `python` відкриває системний ярлик Python 3.14, для якого `pygame` може не встановлюватися. Тому для запуску використовується Python 3.11 через команду `py -3.11`.
 
 ### Запуск гри
 
 ```powershell
-python -m src.minesweeper
+py -3.11 -m src.minesweeper
 ```
 
 Або з параметрами:
 
 ```powershell
-python -m src.minesweeper --difficulty easy --background "#eef6ff" --cell-size 34
+py -3.11 -m src.minesweeper --difficulty easy --background "#eef6ff" --cell-size 34
 ```
 
 Приклад власного поля:
 
 ```powershell
-python -m src.minesweeper --rows 10 --cols 14 --mines 20
+py -3.11 -m src.minesweeper --rows 10 --cols 14 --mines 20
 ```
 
 ### Запуск тестів
 
 ```powershell
 $env:PYTHONPATH="src"
-python -m unittest discover -s tests
+py -3.11 -m unittest discover -s tests
 ```
 
 ### Автоматична Build-перевірка
