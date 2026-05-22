@@ -65,11 +65,45 @@ py -3.11 -m src.minesweeper
 py -3.11 -m src.minesweeper --difficulty easy --background "#eef6ff" --cell-size 34
 ```
 
-Приклад власного поля:
+Інші варіанти запуску для демонстрації `argparse`:
+
+Легка складність зі світлим фоном:
+
+```powershell
+py -3.11 -m src.minesweeper --difficulty easy --background "#eef6ff"
+```
+
+Звичайна складність зі збільшеними клітинками:
+
+```powershell
+py -3.11 -m src.minesweeper --difficulty normal --cell-size 38
+```
+
+Складний режим:
+
+```powershell
+py -3.11 -m src.minesweeper --difficulty hard
+```
+
+Власний розмір поля та кількість мін:
 
 ```powershell
 py -3.11 -m src.minesweeper --rows 10 --cols 14 --mines 20
 ```
+
+Власне поле з іншим кольором фону:
+
+```powershell
+py -3.11 -m src.minesweeper --rows 8 --cols 12 --mines 15 --background "#f7f3e8"
+```
+
+Велике поле з меншими клітинками:
+
+```powershell
+py -3.11 -m src.minesweeper --rows 16 --cols 24 --mines 60 --cell-size 26
+```
+
+Цими прикладами я демонструю, що через `argparse` можна змінювати складність, розмір поля, кількість мін, розмір клітинки та колір фону.
 
 ### Запуск тестів
 
